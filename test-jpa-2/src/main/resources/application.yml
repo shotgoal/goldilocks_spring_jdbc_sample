@@ -1,0 +1,22 @@
+server:
+ port: 8991
+spring:
+  datasource:
+    driver-class-name: "sunje.goldilocks.jdbc.GoldilocksDriver"
+    url: "jdbc:goldilocks://192.168.0.120:44434/test"
+    username: "test"
+    password: "test"
+    hikari:
+      auto-commit: false
+  thymeleaf:
+    view-names: thymeleaf/*
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+    check-template-location: true
+  jpa:
+    database-platform: org.hibernate.dialect.GoldilocksDialect
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+      
