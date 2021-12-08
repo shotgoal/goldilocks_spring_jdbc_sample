@@ -139,8 +139,8 @@
 		</dependency>
 		<dependency>
         	<groupId>GOLDILOCKS</groupId>
-        	<artifactId>GOLDILOCKS_test</artifactId>
-        	<version> 21.1.6</version>
+        	<artifactId>goldilocks8</artifactId>
+        	<version>8</version>
         	<scope>system</scope>
         	<systemPath>${project.basedir}/src/lib/goldilocks8.jar</systemPath>
     	</dependency>
