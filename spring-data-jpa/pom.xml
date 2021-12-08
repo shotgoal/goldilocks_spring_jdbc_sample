@@ -93,6 +93,13 @@
 		</dependency>
 
 		<dependency>
+        	<groupId>GOLDILOCKS</groupId>
+        	<artifactId>goldilocks8</artifactId>
+        	<version>8</version>
+        	<scope>system</scope>
+        	<systemPath>${project.basedir}/src/lib/goldilocks8.jar</systemPath>
+    	</dependency>
+		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
 			<version>2.9.2</version>
