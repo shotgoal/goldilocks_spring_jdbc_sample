@@ -1,5 +1,7 @@
+drop sequence hibernate_sequence IF EXISTS;
 create sequence hibernate_sequence;
 
+drop table IF EXISTS customers;
 create table customers
 (
     id                 	bigint    not null,
