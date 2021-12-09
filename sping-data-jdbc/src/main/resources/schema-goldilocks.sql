@@ -1,4 +1,4 @@
-drop sequence hibernate_sequence IF EXISTS;
+drop sequence  IF EXISTS hibernate_sequence;
 create sequence hibernate_sequence;
 
 drop table IF EXISTS customers;
