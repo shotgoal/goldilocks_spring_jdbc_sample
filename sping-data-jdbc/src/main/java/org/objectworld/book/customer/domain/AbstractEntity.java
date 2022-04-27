@@ -35,11 +35,10 @@ public abstract class AbstractEntity implements Serializable {
     private Long id;
 
     @CreatedDate
-    @Time
     @JsonIgnore
-    private Instant createdDate;
+    private java.sql.Date createdDate;
 
     @LastModifiedDate
     @JsonIgnore
-    private Instant lastModifiedDate;
+    private java.sql.Date lastModifiedDate;
 }
