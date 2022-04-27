@@ -2,6 +2,8 @@ package org.objectworld.book.customer.domain;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.time.*;
+import java.sql.Timestamp;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
@@ -34,9 +36,9 @@ public abstract class AbstractEntity implements Serializable {
 
     @CreatedDate
     @JsonIgnore
-    private Instant createdDate;
+    private java.util.Date createdDate;
 
     @LastModifiedDate
     @JsonIgnore
-    private Instant lastModifiedDate;
+    private java.util.Date lastModifiedDate;
 }

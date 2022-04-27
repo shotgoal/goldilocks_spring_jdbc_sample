@@ -18,17 +18,24 @@ import lombok.ToString;
 @Getter
 @Setter
 @AllArgsConstructor
-@EqualsAndHashCode(of= {"firstName", "lastName", "email", "telephone"}, callSuper=true)
+@EqualsAndHashCode(of= {"firstName", "lastName","last_modified_date", "email", "telephone"}, callSuper=true)
 @ToString(callSuper=true)
 @Builder
 @Table("CUSTOMERS")
 public class Customer extends AbstractEntity {
-    private static final long serialVersionUID = 1L;
+	
+
+	private static final long serialVersionUID = 1L;
     
-	private final String firstName;
-	private final String lastName;
+	private  String firstName;
+	private  String lastName;
+	private  String last_modified_date;
 	@Email
-	private final String email;
-	private final String telephone;
+	private  String email;
+	private  String telephone;
 	private Boolean enabled;
+	
+    public Customer() {
+    	
+	}
 }

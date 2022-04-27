@@ -5,8 +5,8 @@ drop table IF EXISTS customers;
 create table customers
 (
     id                 	bigint    not null,
-    created_date       	timestamp not null,
-    last_modified_date 	timestamp,
+    created_date       	date not null,
+    last_modified_date 	date,
     email              	varchar(255),
     enabled           	boolean   not null,
     first_name         	varchar(255),

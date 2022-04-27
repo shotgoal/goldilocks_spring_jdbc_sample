@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.objectworld.book.customer.domain.Customer;
 import org.objectworld.book.customer.service.CustomerService;
+import org.objectworld.book.customer.service.CustomerRepoService;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,14 +17,25 @@ import org.springframework.web.bind.annotation.RestController;
 public class CustomerResource {
 
     private final CustomerService customerService;
+    private final CustomerRepoService customerRepoService;
 
-    public CustomerResource(CustomerService customerService) {
+    public CustomerResource(CustomerService customerService,CustomerRepoService customerRepoService) {
         this.customerService = customerService;
+        this.customerRepoService = customerRepoService;
     }
 
     @GetMapping
     public Iterable<Customer> findAll() {
         return this.customerService.findAll();
+    }
+
+    @GetMapping("/S1")
+    public List<Customer> S1() {
+        return this.customerRepoService.SelectCustMap();
+    }
+    @GetMapping("/S2")
+    public Iterable<Customer> S2() {
+        return this.customerService.findAll2();
     }
 
     @GetMapping("/{id}")
